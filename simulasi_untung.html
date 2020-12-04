@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Simulasi</title>
+</head>
+<body>
+	<p id="hasilnya"></p>
+</body>
+</html>
+<script type="text/javascript">
+	function formatRupiah(angka, prefix) {
+	    var number_string = angka.replace(/[^,\d]/g, "").toString(),
+		    split = number_string.split(","),
+		    sisa = split[0].length % 3,
+		    rupiah = split[0].substr(0, sisa),
+		    ribuan = split[0].substr(sisa).match(/\d{3}/gi);
+
+		  // tambahkan titik jika yang di input sudah menjadi angka ribuan
+		  if (ribuan) {
+		    separator = sisa ? "." : "";
+		    rupiah += separator + ribuan.join(".");
+		  }
+		  rupiah = split[1] != undefined ? rupiah + "," + split[1] : rupiah;
+		  return prefix == undefined ? rupiah : rupiah ? "Rp. " + rupiah : "";
+	}
+
+
+	var satuKilo = 48410;
+	var strSatuKilo = formatRupiah(satuKilo+'', "Rp. ");
+	var strSepuluhKilo = formatRupiah((satuKilo*10)+'', "Rp. ");
+	// 48.410 per 1 kg minimal 10 kg
+	var hasil =  document.getElementById('hasilnya');
+	hasil.innerHTML = strSatuKilo + '/1 kg, minimal pengiriman 10 kg <br> jadi harga 10 kg  '+strSepuluhKilo;
+// 1-5 pax 
+// 87.500/30pcs , ini berapa kilo
+
+// 30pcs itu berapa kilo?
+// ongkir
+
+
+</script>
