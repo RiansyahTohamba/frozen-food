@@ -91,7 +91,6 @@ p {
 	width: 100%;
 	border-bottom: 1px solid #d8deed;
 	position: relative;
-	padding: 40px 0px;
 	height: auto!important;
 }
 
@@ -664,7 +663,7 @@ section.page-heading {
 
 
 section.breakfast-menu {
-	margin-top: 40px;
+	margin-top: 10px;
 }
 
 section.breakfast-menu .price {
