@@ -1,9 +1,18 @@
-RSpec.describe 'An ideal sandwich' do
-	it 'is delicious' do
-		sandwich = Food.new('delicious', [])
+class Food
+	attr :type, :expired
+	def initialize(type,expired)
+	  @type = type
+	  @expired = expired
+	end
+end
+RSpec.describe 'An ideal nugget' do
+	it 'is sayap' do
+		nugget = Food.new('sayap', '10-10-2021')
 		
-		taste = sandwich.taste
+		type = nugget.type
+		expired = nugget.expired
 		
-		expect(taste).to eq('delicious')
+		expect(type).to eq('sayap')
+		expect(expired).to eq('10-10-2021')
 	end
 end
