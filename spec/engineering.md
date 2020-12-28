@@ -43,6 +43,7 @@ Lalu terdapat pembahasan mengenai Risk dan Reliability.
 Quality didefinisikan sebagai Conform all requirements. 
 Requirement siapa ? 
 Tentu saja requirement dari user yang akan menggunakan produk yang direkayasa oleh insinyur.
+
 Definisi panjangnya 
 "quality in engineering is a measure of how well engineering services meet the client’s or customer’s needs and conform to governing criteria and current practice standards"
 
