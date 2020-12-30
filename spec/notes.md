@@ -1,5 +1,5 @@
 notes.md
-
+Sebagian sudah dipindah di coding-notes
 # coupling dan testability ?
 
 # masih belum didalami
