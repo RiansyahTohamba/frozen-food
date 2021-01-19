@@ -19,6 +19,20 @@ $(document).ready(function() {
             desc: 'Sayap sayap patah',
         },
     ];
+
+    var lakuProducts = [
+        {
+            price: 'Rp 22.000',
+            photoPath: 'cook_01.jpg',
+            name: 'Bakso Asam Manis',
+        },
+        {
+            price: 'Rp 33.000',
+            photoPath: 'cook_02.jpg',
+            name: 'Bakso Karage',
+        }
+    ];
+    
     products.forEach(function(pro){
         var item = $("<div>", {"class": "item col-md-12","style":"padding-bottom: 20px"});
         var food = $("<div>", {"class": "food-item"});
@@ -36,6 +50,24 @@ $(document).ready(function() {
         textContent.append(linkWa);
     });
 
+    
+    lakuProducts.forEach(function(pro){
+        var item = $("<div>", {"class": "item col-md-12","style":"padding-bottom: 20px"});
+        var food = $("<div>", {"class": "food-item"});
+        var foodImg = $("<img>", {"src": "img/"+pro.photoPath});
+        var foodPrice = $("<div>", {"class": "price"}).append(pro.price);
+        var textContent = $("<div>", {"class": "text-content"});
+        var urlWa = "https://wa.me/6281295957942?text=Stock "+pro.name+" nya ready Mba ?";
+        var linkWa = $("<a>", {"href": urlWa,"class":"btn btn-primary"}).text('Beli');
+        $("#lakuProducts").append(item);
+        item.append(food);
+        food.append(foodImg);
+        food.append(foodPrice);
+        food.append(textContent);
+        textContent.append("<h4>"+pro.name+"</h4>");
+        textContent.append(linkWa);
+    });
+    
     // navigation click actions 
     $('.scroll-link').on('click', function(event){
         event.preventDefault();
